@@ -1,27 +1,23 @@
 <?php
 /* Осуществляем проверку вводимых данных и их защиту от враждебных 
 скриптов */
-$your_name = htmlspecialchars($_POST["FIO"]);
-$organization = htmlspecialchars($_POST["Organization"]);
-$BIK = htmlspecialchars($_POST["BIK"]);
-$INN = htmlspecialchars($_POST["INN"]);
 $Schet = htmlspecialchars($_POST["Schet"]);
 $Comment = htmlspecialchars($_POST["Comment"]);
 $Product = htmlspecialchars($_POST["Product"]);
 $Quantity = htmlspecialchars($_POST["Quantity"]);
 /* Устанавливаем e-mail адресата */
-$myemail = "my_email@mail.ru";
+$myemail = "atolkov@kgnic.ru";
 /* Проверяем заполнены ли обязательные поля ввода, используя check_input 
 функцию */
 $your_name = check_input($_POST["FIO"], "Введите ваше имя!");
 $organization = check_input($_POST["Organization"], "Укажите организацию!");
 $BIK = check_input($_POST["BIK"], "Введите БИК!");
 $INN = check_input($_POST["INN"], "Введите ИНН!");
-/* Проверяем правильно ли записан e-mail */
+/* Проверяем правильно ли записан e-mail 
 if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 {
 show_error("<br /> Е-mail адрес не существует");
-}
+}*/
 /* Создаем новую переменную, присвоив ей значение */
 $message_to_myemail = "Здравствуйте! 
 Вашей контактной формой было отправлено сообщение! 
