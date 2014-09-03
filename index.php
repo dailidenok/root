@@ -11,6 +11,7 @@
 </head>
 <body>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/js/js_script.js"></script>
 <div class="container-fluid">
 	<div class="row">
 	<!-- Шапка-->
@@ -101,25 +102,41 @@
 			  <input class="form-control" type="text" id="Schet" name="Schet" placeholder="00000000000000000000000000000">
 			</div>
 		  </div>
-		  <div class="form-group">
+		  <div class="form-group" >
 			<label class="col-sm-2 control-label" for="Comment">Комментарий</label>
 			<div class="col-sm-10">
 			  <textarea class="form-control" rows="3" name="Comment"></textarea> 
 			</div>
 		  </div>
-		  <div class="form-group">
-			<label class="col-sm-2 control-label" for="Product">Продукт</label>
-			<div class="col-sm-5">
-			    <select class="form-control" name="Product">
-				  <option>Vipnet client</option>
-				  <option>Другие продукты Vipnet</option>
-				</select>
-			</div>
-			<label class="col-sm-1 control-label" for="Quantity">Количество</label>
-			<div class="col-sm-4">
-			    <input class="form-control" type="text" id="Quantity" name="Quantity" placeholder="1">
-			</div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  <div id="cont">
+		  <div class="prod">
+			  <div class="form-group ">
+				<label class="col-sm-2 control-label" for="Product">Продукт</label>
+				<div class="col-sm-5">
+					<select class="form-control" name="Product">
+					  <option>Vipnet client</option>
+					  <option>Другие продукты Vipnet</option>
+					</select>
+				</div>
+				<label class="col-sm-1 control-label" for="Quantity">Количество</label>
+				<div class="col-sm-2">
+					<input class="form-control Quantity" type="text"  name="Quantity" placeholder="1">
+				</div>
+				<div class="col-sm-2">
+					<button type="button" class="btn btn-default addbtn">Добавить еще продукт...</button>
+				</div>
+			  </div>
 		  </div>
+		  </div>
+		  
+		  
+		  
 		  <div class="col-sm-offset-2">
 		  	  <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>
 		  </div>

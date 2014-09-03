@@ -1,4 +1,5 @@
 <?php
+require_once('class_item.php');
 class Order
 {
 public $Schet;
@@ -10,7 +11,11 @@ public $FIO;
 public $organization;
 public $BIK;
 public $INN;
+public $items;
 
+function __construct() {
+       
+   }
   
     public function add()
     {
@@ -18,9 +23,12 @@ public $INN;
         Put your database code here to extract from database.
         **/
 		include("dbs.php");
-	$query="INSERT INTO order_table (fio, organization, bik, inn, account, comment, product, quantity) VALUES ('$this->FIO', '$this->organization', '$this->BIK', '$this->INN', '$this->Schet', '$this->Comment', '$this->Product', '$this->Quantity')";
+		foreach ($this->items as $key => $val)
+		{
+	$query="INSERT INTO order_table (fio, organization, bik, inn, account, comment, product, quantity) VALUES ('$this->FIO', '$this->organization', '$this->BIK', '$this->INN', '$this->Schet', '$this->Comment', '$val->Product', '$val->Quantity')";
 	echo $query;
 		mysqli_query($dbcnx, $query);
+		}
 		
 
         return("<p>Ваша заявка принята, с вами свяжется ответственный исполнитель</p>");

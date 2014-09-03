@@ -1,19 +1,35 @@
 <?php
 include_once("class_1.php");
+require_once('class_item.php');
 
 $OrderI = new Order();
 	
 $OrderI->Schet = htmlspecialchars($_POST["Schet"]);
 $OrderI->Comment = htmlspecialchars($_POST["Comment"]);
-$OrderI->Product = htmlspecialchars($_POST["Product"]);
-$OrderI->Quantity = htmlspecialchars($_POST["Quantity"]);
-
 $OrderI->FIO = check_input($_POST["FIO"], "Введите ваше имя!");
 $OrderI->organization = check_input($_POST["Organization"], "Укажите организацию!");
 $OrderI->BIK = check_input($_POST["BIK"], "Введите БИК!");
 $OrderI->INN = check_input($_POST["INN"], "Введите ИНН!");
 
-    $out=$OrderI->add(); 
+$counter=0;
+$ProductName="Product";
+$QuantityName="Quantity";
+while (true){
+
+if(isset($_POST["$ProductName"]))
+{
+$OrderI->items[]=new item();
+$OrderI->items[$counter]->Product = htmlspecialchars($_POST["$ProductName"]);
+$OrderI->items[$counter]->Quantity = htmlspecialchars($_POST["$QuantityName"]);
+}
+else break;
+$counter=$counter+1;
+$ProductName=$ProductName."1";
+$QuantityName=$QuantityName."1";
+
+}
+
+   $out=$OrderI->add(); 
 	echo $out;
 	
 	
