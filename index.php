@@ -71,7 +71,7 @@
     <div class="col-xs-2"></div>
 	<div class="col-xs-8">
 	<h3>Для заказа заполните форму</h3>
-		<form class="form-horizontal" role="form" action="form_processing2.php" method="post">
+		<form class="form-horizontal" role="form" action="form_processing.php" method="post">
 		  <div class="form-group">
 			<label class="col-sm-2 control-label" for="FIO">Ваше имя</label>
 			<div class="col-sm-10">
