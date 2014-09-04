@@ -1,8 +1,5 @@
 <?php
 class item
-{
-public $product;
-public $qtty;
-
-}
+{public $product;
+public $qtty;}
 ?>

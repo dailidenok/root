@@ -23,11 +23,16 @@ function __construct() {
         Put your database code here to extract from database.
         **/
 		include("dbs.php");
+		$query="INSERT INTO order_table (fio, organization, bik, inn, account, comment) VALUES ('$this->FIO', '$this->organization', '$this->BIK', '$this->INN', '$this->Schet', '$this->Comment')";
+	//echo $query;
+		mysqli_query($dbcnx, $query);
+	    $seq = mysqli_insert_id ($dbcnx);
 		foreach ($this->items as $key => $val)
 		{
-	$query="INSERT INTO order_table (fio, organization, bik, inn, account, comment, product, quantity) VALUES ('$this->FIO', '$this->organization', '$this->BIK', '$this->INN', '$this->Schet', '$this->Comment', '$val->Product', '$val->Quantity')";
+	$query="INSERT INTO items (order_id, name, quantity) VALUES ('$seq','$val->Product', '$val->Quantity')";
 	echo $query;
 		mysqli_query($dbcnx, $query);
+	
 		}
 		
 

@@ -87,19 +87,19 @@
 		  <div class="form-group">
 			<label class="col-sm-2 control-label" for="BIK">БИК</label>
 			<div class="col-sm-10">
-			  <input class="form-control" type="text" id="BIK" name="BIK" placeholder="0000000">
+			  <input class="form-control" type="text" id="BIK" name="BIK" placeholder="000000000">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label class="col-sm-2 control-label" for="INN">ИНН</label>
 			<div class="col-sm-10">
-			  <input class="form-control" type="text" id="INN" name="INN" placeholder="000000000">
+			  <input class="form-control" type="text" id="INN" name="INN" placeholder="000000000000">
 			</div>
 		  </div>
 		  <div class="form-group">
 			<label class="col-sm-2 control-label" for="Schet">Р/С</label>
 			<div class="col-sm-10">
-			  <input class="form-control" type="text" id="Schet" name="Schet" placeholder="00000000000000000000000000000">
+			  <input class="form-control" type="text" id="Schet" name="Schet" placeholder="00000000000000000000">
 			</div>
 		  </div>
 		  <div class="form-group" >
