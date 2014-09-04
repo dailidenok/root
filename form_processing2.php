@@ -3,16 +3,11 @@ include_once("class_1.php");
 require_once('class_item.php');
 
 $OrderI = new Order();
-	
-$OrderI->Schet = htmlspecialchars($_POST["Schet"]);
-if (!preg_match("/^[0-9]{20}$/", $OrderI->Schet))
-{show_error("<br /> Неверный счет");}
+if (!$OrderI->setSchet($_POST["Schet"])) {show_error("<br /> Неверный счет");}
+if (!$OrderI->setComment($_POST["Comment"])) {show_error("<br /> Неверный коментарий");}
+if (!$OrderI->setFIO($_POST["FIO"])) {show_error("<br /> ФИО может содержать только буквы русского алфавита");}
 
-$OrderI->Comment = htmlspecialchars($_POST["Comment"]);
 
-$OrderI->FIO = check_input($_POST["FIO"], "Введите ваше имя!");
-if (!preg_match("/^[а-яА-ЯёЁ]{,50}$/", $OrderI->FIO))
-{show_error("<br /> ФИО может содержать только буквы русского алфавита");}
 
 $OrderI->organization = check_input($_POST["Organization"], "Укажите организацию!");
 

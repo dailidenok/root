@@ -11,6 +11,4 @@ if (!$dbcnx) // Если дескриптор равен 0 соединение 
   exit();
 }
 $dbcnx->set_charset('utf8');
-//mysqli_set_charset($dbcnx,"utf8");
-//mysqli_query($dbcnx, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 ?>
