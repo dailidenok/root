@@ -21,7 +21,7 @@ $('#mainform').submit(function()
 			type: "POST",
 			url: "ajax_form_processing.php",
 			data: dataString,
-			success: function(data){$('.output').html(data);} 
+			success: function(data){$('#output').html(data);} 
            
         });       
 		
