@@ -13,8 +13,24 @@ $( document ).ready(function() {
 	
 }); 
   
+$('#mainform').submit(function()
+{
+    dataString = $("#mainform").serialize();
+    $.ajax(
+		{
+			type: "POST",
+			url: "ajax_form_processing.php",
+			data: dataString,
+			success: function(data){$('.output').html(data);} 
+           
+        });       
+		
+    return false; // return false to prevent typical submit behavior
+   
+});
 
   
   
   
 });
+

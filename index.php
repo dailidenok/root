@@ -71,7 +71,7 @@
     <div class="col-sm-2"></div>
 	<div class="col-sm-8">
 	<h3>Для заказа заполните форму</h3>
-		<form class="form-horizontal" role="form" action="form_processing.php" method="post">
+		<form class="form-horizontal" role="form" id="mainform" action="form_processing.php" method="post">
 		  <div class="form-group">
 			<label class="col-sm-2 control-label" for="FIO">Ваше имя</label>
 			<div class="col-sm-10">
@@ -138,6 +138,10 @@
 		  <div class="col-sm-offset-2">
 		  	  <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить</button>
 		  </div>
+		  
+		  <div class="col-sm-offset-2" id='output'></div>
+		  
+		  
 		  		  
 		</form>
 	
