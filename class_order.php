@@ -44,7 +44,7 @@ function __construct() { }
 	
 	public function setComment($Comment)
     {
-		if(preg_match("/^.{1,512}$/", $Comment))
+		if(preg_match("/^.{0,512}$/", $Comment))
 		{
 			$this->Comment = htmlspecialchars($Comment);
 			return true;
@@ -54,7 +54,7 @@ function __construct() { }
 	
 	public function setFIO($FIO)
     {
-		if (preg_match("/^[а-яА-ЯёЁ]{1,50}$/", $FIO))
+		if (preg_match("/^([а-яА-ЯёЁ]{1,50}\s{0,1}){1,3}$/u", $FIO))
 		{
 			$this->FIO = $FIO;
 			return true;
