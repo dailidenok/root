@@ -31,7 +31,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images/allphoto.jpg" alt="logo" class="img-rounded">
+          <img src="images/allphoto.jpg" alt="logo" class="img-rounded" width="350" height="250" >
           <div class="container">
             <div class="carousel-caption">
               <h2>Государственное автономное учреждение Калининградской области "Калининградский государственный научно-исследовательский центр информационной и технической безопасности"</h2>
