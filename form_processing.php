@@ -36,10 +36,10 @@ function show_error($myError)
 {
 ?>
 <html>
-<body>
-<p>Пожалуйста, исправьте следующую ошибку:</p>
-<?php echo $myError; ?>
-</body>
+	<body>
+	<p>Пожалуйста, исправьте следующую ошибку:</p>
+	<?php echo $myError; ?>
+	</body>
 </html>
 <?php
 exit();
